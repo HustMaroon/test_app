@@ -17,7 +17,7 @@ install_plugin Capistrano::SCM::Git
 require "capistrano/bundler"
 require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
-require 'capistrano-unicorn'
+require 'capistrano3/unicorn'
 
 # Include tasks from other gems included in your Gemfile
 #

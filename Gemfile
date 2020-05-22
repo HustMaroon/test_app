@@ -22,7 +22,7 @@ gem 'mysql2'
 gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
-gem 'capistrano-unicorn'
+gem 'capistrano3-unicorn'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
