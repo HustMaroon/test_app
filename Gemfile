@@ -20,6 +20,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'unicorn'
 gem 'mysql2'
 gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano-unicorn'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
