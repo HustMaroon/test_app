@@ -17,7 +17,7 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
- role :app, %w{ubuntu@35.166.25.10}, my_property: :my_value
+ role :ubuntu, %w{ubuntu@35.166.25.10}
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
@@ -44,7 +44,7 @@
   set :ssh_options, {
     keys: %w(/Users/hustmaroon/.ssh/test_app_kp.pem),
     forward_agent: false,
-    auth_methods: %w(password)
+    auth_methods: %w(publickey)
   }
 #
 # The server-based syntax can be used to override options:
