@@ -27,6 +27,6 @@ production:
   timeout: 5000
   database: test_app
   user: root
-  password: ''
+  password: <%= ENV.fetch("DB_PASS") %>
   host: localhost
   port: 3306
