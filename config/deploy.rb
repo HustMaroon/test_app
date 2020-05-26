@@ -14,6 +14,7 @@ set :unicorn_rack_env, 'production'
 set :unicorn_config_path, "/home/ubuntu/current/config/unicorn.rb"
 set :unicorn_roles, 'ubuntu'
 set :migration_role, 'ubuntu'
+set :assets_roles, 'ubuntu'
 
 append :linked_files, "config/master.key"
 
