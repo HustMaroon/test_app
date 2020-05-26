@@ -9,6 +9,8 @@ set :repo_url, "https://github.com/HustMaroon/test_app.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/ubuntu/"
+set :unicorn_config_path, "/home/ubuntu/current/config/unicorn.rb"
+set :unicorn_roles, 'ubuntu'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
