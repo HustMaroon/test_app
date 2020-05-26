@@ -14,6 +14,20 @@ set :unicorn_rack_env, 'production'
 set :unicorn_config_path, "/home/ubuntu/current/config/unicorn.rb"
 set :unicorn_roles, 'ubuntu'
 
+append :linked_files, "config/master.key"
+
+namespace :deploy do
+  namespace :check do
+    before :linked_files, :set_master_key do
+      on roles(:ubuntu), in: :sequence, wait: 10 do
+        unless test("[ -f #{shared_path}/config/master.key ]")
+          upload! 'config/master.key', "#{shared_path}/config/master.key"
+        end
+      end
+    end
+  end
+end
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
