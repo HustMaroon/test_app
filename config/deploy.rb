@@ -28,7 +28,13 @@ namespace :deploy do
       end
     end
   end
+
+  task :restart_unicorn do
+    invoke 'unicorn:reload'
+  end
 end
+
+after 'deploy:publishing', 'deploy:restart_unicorn'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
