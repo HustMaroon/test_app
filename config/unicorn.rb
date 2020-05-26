@@ -1,5 +1,5 @@
 # set path to application
-app_dir = File.expand_path("../../current", __FILE__)
+app_dir = File.expand_path("../../", __FILE__)
 tmp_dir = "#{app_dir}/tmp"
 working_directory app_dir
 # Set unicorn options
